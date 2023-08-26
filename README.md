@@ -20,7 +20,7 @@ Data data yang diperlukan yaitu:
 6. data status barang yang dikirim
 
 Asset yang diperluka yaitu:
-1.
+1. apa ya blm kepikiran
 
 <!-- !4 -->
 Bikin ERD bang
