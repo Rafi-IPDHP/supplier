@@ -9,3 +9,13 @@ Jadi kita itu adalah supplier yang mendistribusikan 3 jenis produk indofood, yai
 4. update data barang
 5. melihat data barang
 6. menghapus data barang
+
+<!-- !3 -->
+Data data yang diperlukan yaitu:
+1. data barang yang tersedia
+
+Asset yang diperluka yaitu:
+1.
+
+<!-- !4 -->
+Bikin ERD bang
