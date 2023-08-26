@@ -24,3 +24,6 @@ Asset yang diperluka yaitu:
 
 <!-- !4 -->
 Bikin ERD bang
+
+<!-- !5 -->
+Ngoding dehh...
