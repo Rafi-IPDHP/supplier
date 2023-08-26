@@ -9,6 +9,7 @@ Jadi kita itu adalah supplier yang mendistribusikan 3 jenis produk indofood, yai
 4. update data barang
 5. melihat data barang
 6. menghapus data barang
+7. membuat, melihat, menambah dan menghapus data varian dari suatu produk
 
 <!-- !3 -->
 Data data yang diperlukan yaitu:
