@@ -13,6 +13,11 @@ Jadi kita itu adalah supplier yang mendistribusikan 3 jenis produk indofood, yai
 <!-- !3 -->
 Data data yang diperlukan yaitu:
 1. data barang yang tersedia
+2. data varian yang tersedia dari suatu produk
+3. alamat tujuan kirim barang
+4. data barang yang dikirim
+5. data jumlah barang yang dikirim
+6. data status barang yang dikirim
 
 Asset yang diperluka yaitu:
 1.
