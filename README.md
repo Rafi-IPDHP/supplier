@@ -11,7 +11,7 @@ Jadi kita itu adalah supplier yang mendistribusikan 3 jenis produk indofood, yai
 6. menghapus data barang
 7. membuat, melihat, menambah dan menghapus data varian dari suatu produk
 
-<!-- !3 Mengumpulkan dan Menganalisis Kebutuhan Data-->
+<!-- !3 Mengumpulkan dan Menganalisis Kebutuhan Data -->
 Data data yang diperlukan yaitu:
 1. data barang yang tersedia
 2. data varian yang tersedia dari suatu produk
@@ -57,9 +57,9 @@ Penjelasan ERD:
     - Jumlah_Dikirim
 
 Catatan:
-- Hubungan antara "Barang" dan "Varian" adalah one-to-many, yang berarti satu barang dapat memiliki banyak varian, tetapi setiap varian terkait dengan satu barang.
-- Hubungan antara "Alamat_Tujuan" dan "Pengiriman" adalah one-to-many, yang berarti satu alamat tujuan dapat digunakan untuk banyak pengiriman, tetapi setiap pengiriman terkait dengan satu alamat tujuan.
-- Hubungan antara "Pengiriman" dan "Detail_Pengiriman" adalah one-to-many, yang berarti satu pengiriman dapat memiliki banyak detail pengiriman yang mewakili varian dan jumlah barang yang dikirim dalam pengiriman tersebut.
+- Hubungan antara "Barang" dan "Varian" adalah __one-to-many__, yang berarti satu barang dapat memiliki banyak varian, tetapi setiap varian terkait dengan satu barang.
+- Hubungan antara "Alamat_Tujuan" dan "Pengiriman" adalah __one-to-many__, yang berarti satu alamat tujuan dapat digunakan untuk banyak pengiriman, tetapi setiap pengiriman terkait dengan satu alamat tujuan.
+- Hubungan antara "Pengiriman" dan "Detail_Pengiriman" adalah __one-to-many__, yang berarti satu pengiriman dapat memiliki banyak detail pengiriman yang mewakili varian dan jumlah barang yang dikirim dalam pengiriman tersebut.
 
 <!-- !5 Implementasi Sistem -->
 Ngoding dehh...
