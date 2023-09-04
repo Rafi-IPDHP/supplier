@@ -12,8 +12,9 @@ Data data yang diperlukan yaitu:
 1. data barang yang tersedia
 2. data barang yang masuk
 3. data barang yang akan diambil
+4. data user
 
-Asset yang diperluka yaitu:
+Asset yang diperlukan yaitu:
 1. TODO: bikin desainnya dulu banh
 
 <!-- !4 Mendesain Model Konseptual -->
