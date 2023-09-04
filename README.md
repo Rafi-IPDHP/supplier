@@ -23,32 +23,32 @@ Asset yang diperlukan yaitu:
 Penjelasan ERD:
 
 - Tabel 1: user
-id (Primary Key)
-name
-email
-password
-role
+id (int, Primary Key)
+name (str)
+email (str)
+password (str)
+role (str)
 
 - Tabel 2: incoming_product
-id (Primary Key)
-name
-price
-quantity
+id (int, Primary Key)
+name (str)
+price (int)
+quantity (int)
 product_id (Foreign Key) [Merujuk ke product.id]
 user_id (Foreign Key) [Merujuk ke user.id]
 
 - Tabel 3: exit_product
-id (Primary Key)
-name
-price
-quantity
+id (int, Primary Key)
+name (str)
+price (int)
+quantity (int)
 product_id (Foreign Key) [Merujuk ke product.id]
 user_id (Foreign Key) [Merujuk ke user.id]
 
 - Tabel 4: product
-id (Primary Key)
-name
-stock
+id (int, Primary Key)
+name (str)
+stock (int)
 
 <!-- !5 Implementasi Sistem -->
 Ngoding dehh...
