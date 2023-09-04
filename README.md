@@ -15,7 +15,9 @@ Data data yang diperlukan yaitu:
 4. data user
 
 Asset yang diperlukan yaitu:
-1. TODO: bikin desainnya dulu banh
+1. Logo Supplier
+2. Icon Edit
+3. Icon Delete
 
 <!-- !4 Mendesain Model Konseptual -->
 Penjelasan ERD:
