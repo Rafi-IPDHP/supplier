@@ -34,16 +34,16 @@ id (int, Primary Key)
 name (str)
 price (int)
 quantity (int)
-product_id (Foreign Key) [Merujuk ke product.id]
-user_id (Foreign Key) [Merujuk ke user.id]
+product_id (Foreign Key) [Merujuk ke product.id, one to many]
+user_id (Foreign Key) [Merujuk ke user.id, one to many]
 
 - Tabel 3: exit_product
 id (int, Primary Key)
 name (str)
 price (int)
 quantity (int)
-product_id (Foreign Key) [Merujuk ke product.id]
-user_id (Foreign Key) [Merujuk ke user.id]
+product_id (Foreign Key) [Merujuk ke product.id, one to many]
+user_id (Foreign Key) [Merujuk ke user.id, one to many]
 
 - Tabel 4: product
 id (int, Primary Key)
