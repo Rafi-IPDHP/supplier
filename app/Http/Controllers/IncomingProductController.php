@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\IncomingProduct;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class IncomingProductController extends Controller
@@ -12,7 +13,8 @@ class IncomingProductController extends Controller
      */
     public function index()
     {
-        //
+        $incomingProduct = IncomingProduct::all();
+        return view('incomingProduct.index', compact('incomingProduct'));
     }
 
     /**
@@ -20,7 +22,8 @@ class IncomingProductController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::all();
+        return view('incomingProduct.create', compact('products'));
     }
 
     /**
@@ -28,7 +31,16 @@ class IncomingProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'product_id' => 'required',
+            'quantity' => 'required|numeric'
+        ]);
+
+        $incomingProduct = IncomingProduct::create($request->all());
+        $product = Product::find($incomingProduct->product_id);
+        $product->stock += $request->quantity;
+        $product->save();
+        return redirect()->route('incoming-product.index');
     }
 
     /**
@@ -44,7 +56,7 @@ class IncomingProductController extends Controller
      */
     public function edit(IncomingProduct $incomingProduct)
     {
-        //
+        return view('incomingProduct.edit', compact('incomingProduct'));
     }
 
     /**

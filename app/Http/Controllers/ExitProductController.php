@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ExitProduct;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ExitProductController extends Controller
@@ -12,7 +13,8 @@ class ExitProductController extends Controller
      */
     public function index()
     {
-        //
+        $exitProducts = ExitProduct::all();
+        return view('exitProduct.index', compact('exitProducts'));
     }
 
     /**
@@ -20,7 +22,8 @@ class ExitProductController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::all();
+        return view('exitProduct.create', compact('products'));
     }
 
     /**
@@ -28,7 +31,36 @@ class ExitProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'product_id' => 'required',
+            'quantity' => 'required|numeric'
+        ]);
+
+        // $incomingProduct = ExitProduct::create($request->all());
+        // $product = Product::find($incomingProduct->product_id);
+        // $product->stock -= $request->quantity;
+        // $product->save();
+        // return redirect()->route('exit-product.index');
+
+        $product = Product::find($request->product_id);
+
+        if ($product) {
+            if ($request->quantity > $product->stock) {
+                // Quantity melebihi jumlah stock yang tersedia.
+                return redirect()->back()->with('error', 'Quantity melebihi stok yang tersedia.');
+            }
+
+            // Jika quantity valid, simpan data exit product.
+            $exitProduct = ExitProduct::create($request->all());
+
+            // Kurangi stock produk yang sesuai.
+            $product->stock -= $request->quantity;
+            $product->save();
+
+            return redirect()->route('exit-product.index')->with('success', 'Data barang keluar telah berhasil disimpan.');
+        }
+
+        return redirect()->route('exit-product.index')->with('error', 'Produk tidak ditemukan.');
     }
 
     /**

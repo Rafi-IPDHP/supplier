@@ -11,19 +11,12 @@ class ExitProduct extends Model
 
     protected $table = 'exit_products';
     protected $fillable = [
-        'name',
-        'price',
         'quantity',
         'product_id',
-        'user_id',
     ];
 
     public function product()
         {
             return $this->belongsTo(Product::class, 'product_id', 'id');
-        }
-    public function user()
-        {
-            return $this->belongsTo(User::class, 'user_id', 'id');
         }
 }

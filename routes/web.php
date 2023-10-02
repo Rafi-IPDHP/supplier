@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IncomingProductController;
+use App\Http\Controllers\ExitProductController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+// Route::get('/login', function () {
+//     return view('auth.login');
+// })->name('login');
+
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'proses'])->name('login.proses');
+Route::view('/', 'welcome')->name('welcome')->middleware('auth');
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+Route::resource('/incoming-product', IncomingProductController::class)->middleware('can:isAdmin');
+Route::resource('/product', ProductController::class)->middleware('auth');
+Route::resource('/exit-product', ExitProductController::class)->middleware('auth');

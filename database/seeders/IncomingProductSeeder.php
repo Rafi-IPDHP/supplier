@@ -12,6 +12,12 @@ class IncomingProductSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $incomingProduct = [
+            [
+                'name' => 'indomilk',
+                'price' => '30000',
+                'quantity' => '20',
+            ]
+        ];
     }
 }

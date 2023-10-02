@@ -14,16 +14,16 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $user = [[
-            'name' => 'Aldo',
+            'name' => 'aldo',
             'email' => 'aldo@gmail.com',
-            'password' => bcrypt('user'),
-            'role' => 'user',
+            'password' => bcrypt('admin'),
+            'role' => 'admin', //admin == supplier
         ],
         [
             'name' => 'Aldo Ganteng',
             'email' => 'aldoganteng@gmail.com',
-            'password' => bcrypt('admin'),
-            'role' => 'admin',
+            'password' => bcrypt('user'),
+            'role' => 'user', // user == agen
         ]
         ];
         foreach ($user as $key => $value){

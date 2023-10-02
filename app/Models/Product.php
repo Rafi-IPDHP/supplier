@@ -12,6 +12,17 @@ class Product extends Model
     protected $table = 'products';
     protected $fillable = [
         'name',
-        'stock'
+        'stock',
+        'price',
+        'supplier'
     ];
+
+    public function incomingProducts()
+    {
+        return $this->hasMany(IncomingProduct::class, 'product_id');
+    }
+    public function exitProducts()
+    {
+        return $this->hasMany(ExitProduct::class, 'product_id');
+    }
 }
