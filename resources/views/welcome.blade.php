@@ -43,7 +43,7 @@
         <div class="col mt-5 d-flex flex-column justify-content-start">
             <p class="fw-semibold">Service Kami</p>
             <p style="line-height: 8px">Tentang Kami</p>
-            <p style="line-height: 8px">Login</p>
+            {{-- <p style="line-height: 8px">Login</p> --}}
         </div>
     </div>
     <div class="row container-xxl mt-3 pe-0">

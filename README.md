@@ -16,8 +16,7 @@ Data data yang diperlukan yaitu:
 
 Asset yang diperlukan yaitu:
 1. Logo Supplier
-2. Icon Edit
-3. Icon Delete
+2. Icon Delete
 
 <!-- !4 Mendesain Model Konseptual -->
 Penjelasan ERD:

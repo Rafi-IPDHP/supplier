@@ -17,9 +17,9 @@
                 @can('isAdmin')
                 <a class="nav-link" href="{{ route('incoming-product.index') }}">Barang Masuk</a>
                 @endcan
-                @cannot('isAdmin')
+                @can('isUser')
                 <a class="nav-link" href="{{ route('exit-product.index') }}">Barang Keluar</a>
-                @endcannot
+                @endcan
               </li>
           </ul>
           <form class="d-flex my-2 my-lg-0">
