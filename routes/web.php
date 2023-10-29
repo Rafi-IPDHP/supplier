@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IncomingProductController;
 use App\Http\Controllers\ExitProductController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,6 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::resource('/incoming-product', IncomingProductController::class)->middleware('can:isAdmin');
 Route::resource('/product', ProductController::class)->middleware('auth');
 Route::resource('/exit-product', ExitProductController::class)->middleware('auth');
+Route::resource('/laporan', LaporanController::class)->middleware('auth');
+Route::get('laporan_masuk', [LaporanController::class, 'laporan_masuk'])->name('laporan_masuk');
+Route::get('laporan_keluar', [LaporanController::class, 'laporan_keluar'])->name('laporan_keluar');

@@ -46,7 +46,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col mb-3">
+                <div class="col mb-2">
                     <div class="row">
                         <div class="col">
                             <label for="price" class="form-label fw-semibold ms-2">Harga Barang (pcs)</label>
@@ -64,15 +64,10 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col mb-4">
-                    <label for="unit" class="form-label fw-semibold ms-2">Unit</label>
-                    <select id="unit" name="unit" class="form-select" aria-label="Default select example">
-                        <option disabled selected>Pilih Unit</option>
-                        <option value="pcs">Pcs</option>
-                        <option value="botol">Botol</option>
-                        <option value="kotak">kotak</option>
-                    </select>
-                </div> --}}
+                <div class="col-6 mb-3">
+                    <label for="date" class="form-label">Tanggal</label>
+                    <input type="date" class="form-control" id="date" name="tanggal" disabled>
+                </div>
                 <div class="col d-flex justify-content-end">
                     <a href="{{ route('incoming-product.index') }}" class="btn btn-secondary">Kembali</a>
                     <button type="submit" class="btn btn-primary ms-2">Tambah Data</button>
@@ -89,6 +84,10 @@
         var priceInput = document.getElementById('price');
         var selectSupplier = document.getElementById('supplier');
         var selectProductOptions = selectElement.innerHTML;
+        let tanggal = document.getElementById('date');
+
+        let date = new Date();
+        tanggal.valueAsDate = date
 
         filterProductsBySupplier = () => {
                 let selectedSupplier = selectSupplier.value;

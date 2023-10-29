@@ -13,6 +13,7 @@ class IncomingProduct extends Model
     protected $fillable = [
         'quantity',
         'product_id',
+        'tanggal',
     ];
 
     public function product()

@@ -43,7 +43,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col mb-3">
+                <div class="col mb-2">
                     <div class="row">
                         <div class="col">
                             <label for="price" class="form-label fw-semibold ms-2">Harga Barang (pcs)</label>
@@ -62,6 +62,10 @@
                     </div>
                     <p id="quantity-error" style="color: red;"></p>
                 </div>
+                <div class="col-6 mb-3">
+                    <label for="date" class="form-label">Tanggal</label>
+                    <input type="date" class="form-control" id="date" name="tanggal" disabled>
+                </div>
                 <div class="col d-flex justify-content-end">
                     <a href="{{ route('exit-product.index') }}" class="btn btn-secondary">Kembali</a>
                     <button type="submit" class="btn btn-primary ms-2">Ambil Barang</button>
@@ -78,6 +82,7 @@
         var priceInput = document.getElementById('price');
         var selectSupplier = document.getElementById('supplier');
         var selectProductOptions = selectElement.innerHTML;
+        document.getElementById('date').valueAsDate = new Date();
 
         function validateQuantity() {
             var selectedOption = selectElement.options[selectElement.selectedIndex];

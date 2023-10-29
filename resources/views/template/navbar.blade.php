@@ -14,11 +14,14 @@
                   <a class="nav-link" href="{{ route('product.index') }}">Barang</a>
               </li>
               <li class="nav-item">
-                @can('isAdmin')
+                @can('isAdmin') {{-- admin == supplier --}}
                 <a class="nav-link" href="{{ route('incoming-product.index') }}">Barang Masuk</a>
                 @endcan
-                @can('isUser')
+                @can('isUser') {{-- user == agen --}}
                 <a class="nav-link" href="{{ route('exit-product.index') }}">Barang Keluar</a>
+                @endcan
+                @can('isManager') {{-- manager == admin --}}
+                <a class="nav-link" href="{{ route('laporan.index') }}">Laporan</a>
                 @endcan
               </li>
           </ul>

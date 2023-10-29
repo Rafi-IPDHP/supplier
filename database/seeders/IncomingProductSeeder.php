@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\IncomingProduct;
 
 class IncomingProductSeeder extends Seeder
 {
@@ -14,10 +15,18 @@ class IncomingProductSeeder extends Seeder
     {
         $incomingProduct = [
             [
-                'name' => 'indomilk',
-                'price' => '30000',
-                'quantity' => '20',
-            ]
+                'quantity' => '10',
+                'tanggal' => '2023-10-24',
+                'product_id' => '1',
+            ],
+            [
+                'quantity' => '3',
+                'tanggal' => '2023-10-24',
+                'product_id' => '3',
+            ],
         ];
+        foreach ($incomingProduct as $key => $value){
+            IncomingProduct::create($value);
+        }
     }
 }

@@ -14,21 +14,21 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $user = [[
-            'name' => 'aldo',
-            'email' => 'aldo@gmail.com',
-            'password' => bcrypt('admin'),
+            'name' => 'supplier',
+            'email' => 'supplier@gmail.com',
+            'password' => bcrypt('supplier'),
             'role' => 'admin', //admin == supplier
         ],
         [
-            'name' => 'Aldo Ganteng',
-            'email' => 'aldoganteng@gmail.com',
-            'password' => bcrypt('user'),
+            'name' => 'agen',
+            'email' => 'agen@gmail.com',
+            'password' => bcrypt('agen'),
             'role' => 'user', // user == agen
         ],
         [
-            'name' => 'Manager',
-            'email' => 'manager@gmail.com',
-            'password' => bcrypt('manager'),
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('admin'),
             'role' => 'manager',
         ],
         ];

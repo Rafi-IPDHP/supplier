@@ -31,9 +31,11 @@ class ExitProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->merge(['tanggal' => now()]);
         $request->validate([
             'product_id' => 'required',
-            'quantity' => 'required|numeric'
+            'quantity' => 'required|numeric',
+            'tanggal' => 'required',
         ]);
 
         // $incomingProduct = ExitProduct::create($request->all());

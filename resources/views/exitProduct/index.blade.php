@@ -12,6 +12,7 @@
                 <th scope="col">Nama Barang</th>
                 <th scope="col">Harga (pcs)</th>
                 <th scope="col">Quantity</th>
+                <th scope="col">Tanggal</th>
                 <th scope="col" class="text-center">Opsi</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                 <td>{{ $value->product->name }}</td>
                 <td>{{ $value->product->price }}</td>
                 <td>{{ $value->quantity }}</td>
+                <td>{{ $value->tanggal }}</td>
                 <td class="text-center">
                     <a href="{{ route('product.index') }}" class="btn btn-primary">Lihat Stock</a>
                 </td>
